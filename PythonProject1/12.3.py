@@ -17,4 +17,4 @@ except ValueError:
 else:
         print(f'Konversija sėkminga: {int_skaicius}')
 finally:
-        print("Manęs niekaip neatsikratysit - FINALLY komanda")
+        print("Programa baigė darbą")
