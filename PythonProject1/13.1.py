@@ -6,8 +6,10 @@
 # 2. Išveskite pranešimą:
 # "Dabar yra <valanda>:<minutė>, <diena>-<mėnuo>-<metai>"
 print('-------------------------------------------------')
+# 1.A
 import datetime
 dt_res = datetime.datetime.today()
+# 1.B
 metai = dt_res.year
 menuo = dt_res.month
 diena = dt_res.day
@@ -23,4 +25,5 @@ print(dt_res.hour)
 print(dt_res.minute)
 print(dt_res.second)
 
-print(f'Dabar yra {valanda}:{minute}, {diena}--{menuo}--{metai}
+# 2
+print(f'Dabar yra {valanda}:{minute}, {diena}--{menuo}--{metai}')
