@@ -21,4 +21,4 @@ print(my_datetime)
 
 my_datetime = datetime.datetime(2000, 1, 1)
 time_from_2000 = datetime.datetime.today() - my_datetime
-print(f'Praejo {time_from_2000} dienu nuo 2000-01-01')
+print(f'Praejo {(time_from_2000).days} dienu nuo 2000-01-01')
