@@ -47,4 +47,5 @@ skirtumas = dabar - mileniumas
 print(skirtumas)
 print(skirtumas.days)
 print(skirtumas.seconds) # Valandų skaičiųs (naudojant .seconds)
+print(skirtumas.seconds // 60 // 60)  # seconds valandomis
 print(skirtumas.total_seconds()) # Bendrą sekundžių skaičių (.total_seconds())
