@@ -1,36 +1,29 @@
-# 2. Dekoratoriai
+# 3. Iteratoriai
 # Užduotis:
-# Sukurkite dekoratorių sekimo_dekoratorius, kuris:
-# 1. Išveda žinutę prieš ir po funkcijos vykdymo:
-# a. Prieš: „Vykdoma funkcija: <funkcijos_pavadinimas>“
-# b. Po: „Funkcija baigta!“
-# 2. Pridėkite dekoratorių prie funkcijos dauginti(a, b), kuri grąžina dviejų skaičių
-# sandaugą.
+# Sukurkite klasę SkaiciuSekosIteratorius, kuri:
+# 1. Inicializuojama su pradiniu ir galiniu skaičiumi.
+# 2. Leidžia iteruoti nuo pradinio iki galinio skaičiaus imtinai.
+# 3. Grąžina skaičius kas antrą žingsnį.
 # Papildoma užduotis:
-# Pridėkite funkciją dalinti(a, b) su tuo pačiu dekoratoriumi. Jei b == 0, grąžinkite
-# klaidos pranešimą.
+# Pridėkite metodą atgaline_seka(), kuris grąžina skaičius atvirkštine tvarka.
 
-def sekimo_dekoratorius(funkcija):
-    def vidine(*args, **kwargs):
-        print(f"Vykdoma funkcija: {funkcija.__name__}")
-        rezultatas = funkcija(*args, **kwargs)
-        print("Funkcija baigta!")
-        return rezultatas
-    return vidine
+class SkaiciuSekosIteratorius:
+    def __init__(self, pradinis, galinis):
+        self.pradinis = pradinis
+        self.galinis = galinis
 
-@sekimo_dekoratorius
-def dauginti(a, b):
-    return a * b
+    def __iter__(self):
+        return iter(range(self.pradinis, self.galinis + 1, 2))
 
-@sekimo_dekoratorius
-def dalinti(a, b):
-    if b == 0:
-        return "Klaida: dalyba iš nulio negalima!"
-    return a / b
+    def atgaline_seka(self):
+        return [i for i in range(self.galinis, self.pradinis - 1, -2)]
 
-daug = dauginti(3, 4)
-dal1 = dalinti(10, 2)
-dal2 = dalinti(5, 0)
-print(daug)
-print(dal1)
-print(dal2)
+# Pavyzdys naudojimui
+skaiciai = SkaiciuSekosIteratorius(1, 10)
+
+print("Sekos iteravimas:")
+for skaicius in skaiciai:
+    print(skaicius)
+
+print("Atgalinė seka:")
+print(skaiciai.atgaline_seka())
