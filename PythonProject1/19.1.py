@@ -14,11 +14,12 @@ c = conn.cursor() # sukuriamas kursorius(tai atidarymas tam tikro veiksmo)
 # Lentelės sukūrimas
 c.execute(
 '''
-CREATE TABLE IF NOT EXISTS studentai (
+CREATE TABLE IF NOT EXISTS mokykla (
     pavadinimas TEXT,
     adresas TEXT,
     mokiniu_skaicius INTEGER)
 ''')
 
 conn.commit() #commitinimas
-conn.close()
+conn.close() #uzdarymas
+# atsiranda kaireje failiukas   pavyzdys.db (kaip exelio failiukas)
