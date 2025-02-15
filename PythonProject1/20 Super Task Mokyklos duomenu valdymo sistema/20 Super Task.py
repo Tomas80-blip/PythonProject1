@@ -149,7 +149,7 @@ def prideti_mokytoja(vardas, pavarde, dalykas):
                       (vardas, pavarde, dalykas))
             conn.commit()
     except sqlite3.Error as e:
-        print(f"Klaida pridedant mokinį: {e}")
+        print(f"Klaida pridedant mokytoja: {e}")
 
 def print_all_mokytojai_rows():
     with sqlite3.connect('mokykla.db') as conn:
@@ -165,7 +165,7 @@ def atnaujinti_mokytoja(vardas, pavarde, naujas_dalykas):
                       (naujas_dalykas, vardas, pavarde))
             conn.commit()
     except sqlite3.Error as e:
-        print(f"Klaida atnaujinant mokinį: {e}")
+        print(f"Klaida atnaujinant mokytoja: {e}")
 
 def trinti_mokytoja(vardas, pavarde):
     try:
@@ -174,7 +174,7 @@ def trinti_mokytoja(vardas, pavarde):
             c.execute("DELETE FROM mokytojai WHERE vardas=? AND pavarde=?", (vardas, pavarde))
             conn.commit()
     except sqlite3.Error as e:
-        print(f"Klaida trinant mokinį: {e}")
+        print(f"Klaida trinant mokytoja: {e}")
 
 
 
