@@ -5,14 +5,14 @@
 # c. Jei amzius < 18, grąžina "Vartotojas nepilnametis.".
 # 2. Išbandykite funkciją su reikšmėmis (-5), (15), (21).
 
-def tikrinti_amziu(amzius: int) -> int:
+def tikrinti_amziu(amzius):
     if amzius < 0:
         raise ValueError('Amžius negali būti neigiamas!')
     elif amzius >= 18:
-        return 'Vartotojas pilnametis'
+        print('Vartotojas pilnametis!')
     else:
-        return 'Vartotojas nepilnametis'
+        print('Vartotojas nepilnametis!')
 
-print(tikrinti_amziu(21))
-print(tikrinti_amziu(16))
-print(tikrinti_amziu(-5))
+tikrinti_amziu(21)
+tikrinti_amziu(16)
+tikrinti_amziu(-3)

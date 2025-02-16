@@ -7,14 +7,14 @@
 # # klaidų.
 
 
-
-try:
-        ivestis = input("Įveskite integer skaičių: ")
-        int_skaicius = int(ivestis)
-        print("Įvestis tinkama", int_skaicius)
-except ValueError:
-        print("Įvestis NETINKAMA, pakartokite!!!")
-else:
-        print(f'Konversija sėkminga: {int_skaicius}')
-finally:
-        print("Programa baigė darbą")
+while True:
+        try:
+                ivestis = input("Įveskite integer skaičių: ")
+                int_skaicius = int(ivestis)
+                print("Įvestis tinkama", int_skaicius)
+        except ValueError:
+                print("Įvestis NETINKAMA, pakartokite!!!")
+        else:
+                print(f'Konversija sėkminga: {int_skaicius}')
+        finally:
+                print("Programa baigė darbą")
