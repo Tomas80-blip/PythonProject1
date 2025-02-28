@@ -1,3 +1,31 @@
+# # (Object Relational Mapping) principą. ORM suteikia galimybę manipuliuoti duomenimis naudojant Python
+# # klases vietoje tiesioginių SQL užklausų, todėl duomenų valdymas tampa lankstesnis ir suprantamesnis.
+#
+# # Tam kad geletume dirbti su SQLAlchemy reikia ji instaliuoti.
+# # Reikia uzeiti i terminala ir nukopijuoti sia komanda
+#
+# # pip install sqlalchemy #ENTER
+#
+#
+# # jei neranda python instaliacijos, tai reikia isinstaliuoti "Phyton" versija ir instaliuoti naujai
+# # ❗ instaliacijos metu uzdeti varnele laukelyje apacioje, check "Add Python to PATH" before clicking Install.
+#
+#
+#
+# # Šiame dokumente aptariami pagrindiniai SQLAlchemy naudojimo principai, įskaitant duomenų bazės kūrimą,
+# # duomenų įterpimą, skaitymą, atnaujinimą, trynimą, paiešką bei skaičiavimus su pavyzdžiais.
+#
+# #
+# # Duomenų bazės sukūrimas ir modelio aprašymas
+# # Prieš pradedant darbą su duomenimis, reikia aprašyti jų struktūrą. SQLAlchemy leidžia tai padaryti
+# # naudojant klases, kurios atitinka duomenų bazės lenteles.
+#
+# import sqlalchemy #jei instaliuota tai sis tekstas neraudonuoja
+#
+#
+#
+##
+#
 # Šiame pavyzdyje sukuriama projektai lentelė su trimis laukais:
 #
 # id – unikalus projekto identifikatorius.
@@ -77,8 +105,8 @@ mokytojai = [
 ]
 
 
-# #pridedam visus mokytojus
-# session.add_all(mokytojai)
+#pridedam visus mokytojus
+session.add_all(mokytojai)
 
 # arba
 for mok in mokytojai:
