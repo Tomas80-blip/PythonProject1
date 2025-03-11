@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pridėti mokinį</title>
+</head>
+<body>
+    <h1>Pridėti naują mokinį</h1>
+
+    <form method="POST">
+        <label for="vardas">Vardas:</label>
+        <input type="text" name="vardas" required><br>
+
+        <label for="pavarde">Pavardė:</label>
+        <input type="text" name="pavarde" required><br>
+
+        <label for="klase">Klasė:</label>
+        <input type="number" name="klase" required><br>
+
+        <button type="submit">Pridėti</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">Atgal į pagrindinį puslapį</a>
+</body>
+</html>

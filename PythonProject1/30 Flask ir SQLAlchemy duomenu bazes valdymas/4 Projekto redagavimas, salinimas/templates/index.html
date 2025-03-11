@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h4>Projektu lentele</h4>
+        <form action="" method="get">
+            <p><input type="text" name="searchlaukelis"></p>
+            <p><input type="submit" value="filtruoti"></p>
+        </form>
+        {% for elem in projektas_rows %}
+            <p>{{ elem }}</p>
+            <p>
+                <a href="/projektai/{{ elem.id }}">ziureti</a>
+                <a href="/redaguoti-projekta/{{ elem.id }}">redaguoti</a>
+                <form action="/trinti-projekta/{{ elem.id }}" method="post">
+                    <input type="submit" value="istrinti">
+                </form>
+            </p>
+        {% endfor %}
+    </body>
+</html>

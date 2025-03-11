@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Paieška</title>
+</head>
+<body>
+    <h1>Paieškos forma</h1>
+    <form action="" method="GET">
+        <input type="text" name="query" placeholder="Įveskite paieškos frazę">
+        <button type="submit">Ieškoti</button>
+    </form>
+
+    {% if uzklausa %}
+        <p>Jūsų paieškos frazė: <strong>{{ uzklausa }}</strong></p>
+    {% endif %}
+</body>
+</html>

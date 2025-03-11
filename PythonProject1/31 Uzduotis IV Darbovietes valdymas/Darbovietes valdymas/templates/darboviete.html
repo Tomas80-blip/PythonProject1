@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<h4>{{ darboviete.pavadinimas }}</h4>
+<p>ID: {{ darboviete.id }}</p>
+<p>Miestas: {{ darboviete.miestas }}</p>
+<p>Darbuotoju skaicius: {{ darboviete.darbuotoju_skaicius }}</p>
+<a href="{{ url_for('index') }}">Grizti</a>
+{% endblock %}

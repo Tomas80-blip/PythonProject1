@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Mokiniai</title>
+</head>
+<body>
+    <h1>Mokinių sąrašas</h1>
+    <ul>
+        {% for mokinys in Mokinys_rows %}
+            <li>{{ mokinys.id }} {{ mokinys.vardas }} {{ mokinys.pavarde }} - {{ mokinys.klase }} klasė</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

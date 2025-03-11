@@ -1,0 +1,88 @@
+body {
+    font-family: "Anton", sans-serif;
+    margin: 20px
+    background-color: #00ffff;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #cfcfcf;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color:#20aac9;
+    color: white;
+}
+.button {
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10pxs;
+}
+
+.button.green{
+    background-color: green;
+    color: white;
+}
+
+.button.blue{
+    background-color: blue;
+    color: white;
+}
+
+.button.red{
+    background-color: red;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    margin-top: 20px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+button.green{
+    background-color: green;
+    color: white;
+}
+
+button.blue{
+    background-color: blue;
+    color: white;
+}
+
+button.red{
+    background-color: red;
+    color: white;
+}

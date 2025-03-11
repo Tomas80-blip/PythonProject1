@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registracija</title>
+</head>
+<body>
+    <h1>Registracijos forma</h1>
+    <form action="" method="POST">
+        <input type="text" name="vardas" placeholder="Įveskite vardą"><br><br>
+        <input type="password" name="slaptazodis" placeholder="Įveskite slaptažodį"><br><br>
+        <input type="password" name="slaptazodis2" placeholder="Pakartokite slaptažodį"><br><br>
+        <button type="submit">Registruotis</button>
+    </form>
+
+    {% if klaida %}
+        <p style="color: red;">{{ klaida }}</p>
+    {% endif %}
+</body>
+</html>

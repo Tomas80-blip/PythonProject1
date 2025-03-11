@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Darbuotojai</h1>
+<a class="button green" href="{{ url_for('prideti_darbuotoja') }}">Prideti darbuotoja</a>
+<table>
+    <tr>
+        <th>Vardas</th>
+        <th>Pavarde</th>
+        <th>Pareigos</th>
+        <th>Darboviete</th>
+        <th>Veiksmai</th>
+    </tr>
+    {% for darbuotojas in darbuotojai %}
+    <tr>
+        <td>{{ darbuotojas.vardas }}</td>
+        <td>{{ darbuotojas.pavarde }}</td>
+        <td>{{ darbuotojas.pareigos }}</td>
+        <td>{{ darbuotojas.darboviete.pavadinimas }}</td>
+        <td>
+            <a class="button blue" href="{{ url_for('redaguoti_darbuotoja', id=darbuotojas.id) }}">Redaguoti</a>
+            <form action="{{ url_for('trinti_darbuotoja', id=darbuotojas.id) }}" method="post" style="display:inline;">
+                <button class="button red" type="submit">Trinti</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

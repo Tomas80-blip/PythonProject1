@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Vartotojai</title>
+</head>
+<body>
+    <h1>Vartotojų sąrašas</h1>
+    <ul>
+        {% for vardas in vardai %}
+            <li><a href="/vartotojas/{{ vardas }}">{{ vardas }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/">Grįžti</a>
+</body>
+</html>

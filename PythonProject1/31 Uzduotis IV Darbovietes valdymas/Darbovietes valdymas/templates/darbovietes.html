@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Darbovietes</h1>
+
+<form method="GET">
+    <input type="text" name="search" placeholder="Ieskoti pagal pavadinima" value="{{ search_query }}">
+    <button type="submit">Ieskoti</button>
+</form>
+
+<a class="button green" href="{{ url_for('prideti_darboviete') }}">Prideti darboviete</a>
+<table>
+    <tr>
+        <th>Pavadinimas</th>
+        <th>Miestas</th>
+        <th>Darbuotoju skaicius</th>
+        <th>Veiksmai</th>
+    </tr>
+    {% for darboviete in darbovietes %}
+    <tr>
+        <td><a href="{{ url_for('perziureti_darboviete', id=darboviete.id) }}">{{ darboviete.pavadinimas }}</a></td>
+        <td>{{ darboviete.miestas }}</td>
+        <td>{{ darboviete.darbuotoju_skaicius }}</td>
+        <td>
+            <a class="button blue" href="{{ url_for('redaguoti_darboviete', id=darboviete.id) }}">Redaguoti</a>
+            <form action="{{ url_for('trinti_darboviete', id=darboviete.id) }}" method="post" style="display:inline;">
+                <button class="button red" type="submit">Trinti</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

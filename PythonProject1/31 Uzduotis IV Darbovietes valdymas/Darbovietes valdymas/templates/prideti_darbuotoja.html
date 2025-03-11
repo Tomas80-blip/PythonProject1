@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Prideti darbuotoja</h1>
+<form method="POST">
+    <label>Vardas:</label>
+    <input type="text" name="vardas" required>
+
+    <label>Pavarde:</label>
+    <input type="text" name="pavarde" required>
+
+    <label>Pareigos:</label>
+    <input type="text" name="pareigos" required>
+
+    <label>Darboviete:</label>
+    <select name="darboviete_id">
+        {% for darboviete in darbovietes %}
+        <option value="{{ darboviete.id }}">{{ darboviete.pavadinimas }}</option>
+        {% endfor %}
+    </select>
+
+    <button class="button green" type="submit">Prideti</button>
+</form>
+<a href="{{ url_for('darbuotojai') }}">Grizti</a>
+{% endblock %}

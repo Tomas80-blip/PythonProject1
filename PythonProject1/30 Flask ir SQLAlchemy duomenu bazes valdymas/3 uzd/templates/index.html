@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Mokiniai</title>
+</head>
+<body>
+    <h1>Mokiniai</h1>
+
+    <form method="get">
+        <input type="text" name="search" placeholder="Ieškoti pagal vardą" value="{{ search_query }}">
+        <button type="submit">Ieškoti</button>
+    </form>
+
+    <a href="{{ url_for('prideti_mokini') }}">Pridėti mokinį</a>
+
+    <ul>
+        {% for mokinys in mokiniai %}
+            <li>
+                {{ mokinys.vardas }} {{ mokinys.pavarde }} - Klasė: {{ mokinys.klase }} - Sekanti klasė: {{ mokinys.sekanti_klase }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

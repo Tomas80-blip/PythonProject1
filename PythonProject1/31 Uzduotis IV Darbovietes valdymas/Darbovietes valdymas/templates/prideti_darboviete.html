@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Prideti darboviete</h1>
+<form action="/prideti-darboviete" method="post">
+    <p>Darbovietes pavadinimas</p>
+    <input type="text" name="pavadinimas" required>
+    <p>Darbovietes vieta</p>
+    <input type="text" name="miestas" required >
+    <button class="button green" type="submit">Prideti</button>
+</form>
+{% endblock %}

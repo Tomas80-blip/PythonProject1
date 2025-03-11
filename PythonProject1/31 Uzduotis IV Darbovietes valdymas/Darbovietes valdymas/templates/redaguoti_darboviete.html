@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Redaguoti darboviete</h1>
+<form method="POST">
+    <label>Pavadinimas:</label>
+    <input type="text" name="pavadinimas" value="{{ darboviete.pavadinimas }}" required>
+    <label>Miestas:</label>
+    <input type="text" name="miestas" value="{{ darboviete.miestas }}" required>
+    <button class="button blue" type="submit">Issaugoti</button>
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Redaguoti darbuotoja</h1>
+<form method="POST">
+    <label>Vardas:</label>
+    <input type="text" name="vardas" value="{{ darbuotojas.vardas }}" required>
+
+    <label>Pavarde:</label>
+    <input type="text" name="pavarde" value="{{ darbuotojas.pavarde }}" required>
+
+    <label>Pareigos:</label>
+    <input type="text" name="pareigos" value="{{ darbuotojas.pareigos }}" required>
+
+    <label>Darboviete:</label>
+    <select name="darboviete_id">
+        {% for darboviete in darbovietes %}
+        <option value="{{ darboviete.id }}" {% if darboviete.id == darbuotojas.darboviete_id %}selected{% endif %}>
+            {{ darboviete.pavadinimas }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <button class="button blue" type="submit">Prideti</button>
+</form>
+<a href="{{ url_for('darbuotojai') }}">Atsaukti</a>
+{% endblock %}
