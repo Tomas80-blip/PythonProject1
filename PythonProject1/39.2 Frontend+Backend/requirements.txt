@@ -1,0 +1,26 @@
+# React+Flask
+# .venv- virtual envirament t.b. uzinstaliuotas projekte, jei nera- suinstaliuoti
+
+# 1 variantas#
+
+# darbineje direktorijoje sukurti failiuka requirements.txt ir taip aprasyti
+
+flask==3.1.0
+flask-cors==5.0.1
+flask-sqlalchemy==3.1.1
+
+# nukopijuoti ji i root direktorija(t.b. >.venv library root (rudame fone))
+# suinstaliuoti sias 3 bibliotekas per terminala
+# pip install -r .\requirements.txt
+# be siu instaliavimu visi importai pabraukiami raudonai, kad ju nera
+
+# tam kad veiktu backend serveris reikia sukurti 3 failus:
+# app.py
+# database.py
+# models.py
+
+# 2 variantas nenurodant versiju, tada susiintaliuos paskutines versijos
+
+# flask==
+# flask-cors==
+# flask-sqlalchemy==
